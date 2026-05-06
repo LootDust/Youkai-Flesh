@@ -1,0 +1,7 @@
+package org.tlhstudio.youkaiflesh.content.item.food;
+
+import org.tlhstudio.youkaiflesh.api.item.food.FleshFoodItem;
+
+public class FleshItem extends FleshFoodItem {
+
+}

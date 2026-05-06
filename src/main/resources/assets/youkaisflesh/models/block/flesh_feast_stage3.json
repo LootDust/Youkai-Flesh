@@ -1,0 +1,11 @@
+{
+  "parent": "youkaisflesh:custom/feast/flesh_feast_stage3",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "brain": "youkaisflesh:block/feast/flesh_brain_3",
+    "particle": "youkaishomecoming:block/feast/tray_top",
+    "skeleton": "youkaisflesh:block/feast/flesh_skeleton_2",
+    "tray_bottom": "youkaishomecoming:block/feast/tray_bottom",
+    "tray_top": "youkaishomecoming:block/feast/tray_top"
+  }
+}

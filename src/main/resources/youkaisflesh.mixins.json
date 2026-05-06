@@ -1,0 +1,15 @@
+{
+    "required": true,
+    "package": "org.tlhstudio.youkaiflesh.mixins",
+    "mixins": [
+        "FDModTagMixin"
+    ],
+    "client": [
+    ],
+    "server": [
+    ],
+    "compatibilityLevel": "JAVA_21",
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

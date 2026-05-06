@@ -1,0 +1,9 @@
+package org.tlhstudio.youkaiflesh.content.item.food;
+
+import org.tlhstudio.youkaiflesh.api.item.food.FleshFoodItem;
+
+public class FleshBoiledDumplingItem extends FleshFoodItem {
+    public FleshBoiledDumplingItem() {
+        super();
+    }
+}

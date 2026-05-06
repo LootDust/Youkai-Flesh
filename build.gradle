@@ -28,6 +28,22 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    flatDir  {
+        dirs "libs"
+    }
+    repositories {
+        maven {
+            url = "https://cursemaven.com"
+        }
+    }
+    repositories {
+        maven {
+            url = "https://api.modrinth.com/maven"
+        }
+    }
+    maven { // Registrate
+        url = "https://maven.ithundxr.dev/snapshots"
+    }
 }
 
 base {
@@ -139,6 +155,13 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    implementation "curse.maven:farmersdelight-398521:${fd_version}"
+
+    implementation "com.tterrag.registrate:Registrate:${registrate_version}"
+    implementation "maven.modrinth:youkaishomecoming:${yh_version}"
+
+    implementation "dev.xkmc:l2core:${l2core_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -153,6 +176,10 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_name               : mod_name,
             mod_license            : mod_license,
             mod_version            : mod_version,
+            fd_version             : fd_version,
+            registrate_version     : registrate_version,
+            yh_version             : yh_version,
+            l2core_version         : l2core_version,
     ]
     inputs.properties replaceProperties
     expand replaceProperties
@@ -174,7 +201,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/repo"
+            url = "file://${project.projectDir}/repo"
         }
     }
 }
